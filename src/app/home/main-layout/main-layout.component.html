@@ -1,0 +1,18 @@
+<app-header></app-header>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over">
+        <mat-nav-list>
+            <button mat-button><a mat-list-item [routerLink]="'/'">All public rooms</a></button>
+            <button mat-button><a mat-list-item [routerLink]="'/'">Private rooms</a></button>
+            <button mat-button><a mat-list-item [routerLink]="'/'">Friends</a></button>
+            <button mat-button><a mat-list-item (click)="createRoomDialog()">Create Room</a></button>
+            <button mat-button style="display: block;"><a mat-list-item (click)="logout()">Logout</a></button>
+            <button mat-button style="display: block;"><a mat-list-item (click)="sidenav.toggle()" mat-list-item>Close</a></button>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="chabox-content" style="height: 100%; width: 100%;">
+            <app-chat-box-layout></app-chat-box-layout>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

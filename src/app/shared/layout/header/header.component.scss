@@ -1,0 +1,19 @@
+
+
+.mat-toolbar{
+    display: flex;
+    background: black !important;
+    flex: 1 auto;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: row;
+    align-items: inherit;
+    margin-right: 30px;
+
+}
+
+h1 {
+    flex: 1 1 auto;
+}

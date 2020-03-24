@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+        <button mat-icon-button>
+          <mat-icon (click)="toggleSidenav()">menu</mat-icon>
+        </button>
+        <h1>Chatroom</h1>
+        <span class="menu-spacer"></span>
+        <div class="user-details">
+          <h2 *ngIf="user">{{user.username}}</h2>
+        </div>
+</mat-toolbar>

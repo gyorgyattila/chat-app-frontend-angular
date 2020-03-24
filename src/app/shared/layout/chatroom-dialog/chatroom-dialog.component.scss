@@ -1,0 +1,36 @@
+
+  button {
+    display: flex;
+    flex-direction: column;
+    border: 40px;
+    border-radius: 70px;
+    text-align: center;
+    width: 65px;
+    margin-right: 5px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    color: white;
+    cursor: pointer;
+  }
+
+  h4{
+    font-family: cursive;
+    text-align: center;
+  }
+
+  mat-dialog-content{
+    width: 295px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  mat-dialog-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+
+

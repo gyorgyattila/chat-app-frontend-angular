@@ -1,0 +1,48 @@
+.container {
+    width: 100%;
+    background: slategray;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .mat-list-item {
+      width: 100%;
+      color: white;
+      cursor: pointer;
+
+  }
+  :host /deep/ .mat-list-item-content {
+    width: 100%;
+  }
+  
+    .member-list-header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  
+    .new-room-button{
+      border: 0px;
+      height: 39px;
+      margin-top: 10px;
+      background: repeating-linear-gradient(45deg, black, transparent 100px);
+    }
+    i{
+      color: azure;
+    }
+  
+    .room-form{
+        display: flex;
+        flex-direction: column;
+    }
+  
+    :host /deep/ .mat-list-item-content {
+      display: inline-flex !important;
+      flex-direction: row-reverse !important;
+    }
+    img {
+      height: 50px;
+      width: 50px;
+      margin-right: 25px;
+    }
+  
+  

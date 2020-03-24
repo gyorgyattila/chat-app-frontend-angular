@@ -1,0 +1,37 @@
+
+<div class="App" *ngIf="chatroom !== null" id="chat-window">
+<main class="chat-window" *ngIf="chatroom !== null">
+  <header class="chat-header">
+    <h2>{{chatroom.name}}</h2>
+    <span class="participants"></span>
+  </header>
+  <div class="messages" #scrollable>
+  <section class="chat-session">
+    <ul class="message-list">
+      <li class="user-message" *ngFor="let message of chatroom.messages">
+
+      <div class="message-container" *ngIf="message.user.username === user.username">
+        <img src="assets/user.png" alt="Avatar">
+        <h4>{{message.user.username}}</h4>
+        <p>{{message.text}}</p>
+        <span class="time-right">{{message.createdAt | date:'MMM d, y, h:mm a'}}</span>
+      </div>
+      <div class="message-container other-user" *ngIf="message.user.username !== user.username">
+        <img src="assets/user1.png" alt="Avatar" class="right">
+        <h4>{{message.user.username}}</h4>
+        <p>{{message.text}}</p>
+        <span class="time-right">{{message.createdAt | date}}</span>
+      </div>
+
+      </li>
+    </ul>
+  </section>
+  </div>
+  <footer class="chat-footer">
+    <form [formGroup]="messageForm" (ngSubmit)="sendMessage(messageForm.value)"> 
+      <input placeholder="Type a message. Hit Enter to send" type="text" formControlName="text">
+    </form>
+    <button (click)="sendMessage(messageForm.value)" class="submit-button">Send</button>
+  </footer>
+</main>
+</div>

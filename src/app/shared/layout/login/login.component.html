@@ -1,0 +1,36 @@
+<mat-card>
+  <h2>Welcome to ChatFix</h2>
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field >
+        <input type="text" matInput placeholder="Username" formControlName="username">
+        <mat-icon matPrefix style="font-size: x-large; margin-right: 10px">account_box</mat-icon>
+        <mat-error *ngIf="loginForm.controls.username.hasError('required')">
+          Username is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+        <button mat-icon-button matPrefix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide" style="font-size: large; margin-right: 10px;" type="button">
+          <mat-icon  >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="loginForm.controls.password.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+
+      <div class="buttons">
+        <p>Dont you have an account yet? <a href="/registration">Sign up </a></p>
+        <div class="button-login">
+          <button type="submit" mat-button>Login</button>
+        </div>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

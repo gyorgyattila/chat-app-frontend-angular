@@ -1,0 +1,14 @@
+<div class="container" *ngIf="chatroom!==null">
+  <mat-nav-list>
+    <div class="member-list-header">
+      <h2>Members</h2>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-list-item *ngFor="let member of chatroom.members" >
+      <img  src="assets/user.png">
+      <h2 mat-line>{{member.username}}</h2>
+      <mat-divider></mat-divider>
+  </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-nav-list>
+</div>

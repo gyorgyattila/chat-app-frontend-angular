@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Create Room</h2>
+
+<mat-dialog-content [formGroup]="roomForm">
+
+  <h4>Room name</h4>
+  <mat-form-field>
+    <input matInput placeholder="Room name" formControlName="name">
+  </mat-form-field>
+
+
+  <h4>Type</h4>
+  <mat-form-field>
+    <mat-label>Room type</mat-label>
+    <mat-select matNativeControl required formControlName="type">
+      <mat-option value="public">Public</mat-option>
+      <mat-option value="private">Private</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field *ngIf="passwordRequired">
+    <input matInput placeholder="Password" formControlName="password">
+  </mat-form-field>
+
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button (click)="close()">Close</button>
+  <button type="submit" (click)="save()">Create</button>
+</mat-dialog-actions>

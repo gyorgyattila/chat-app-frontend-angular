@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  background: slategray;
+  overflow-y: auto;
+  height: 100%;
+}
+.mat-list-item {
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+.mat-list-item.active {
+  background: black;
+
+}
+
+  .chat-list-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  i{
+    color: azure;
+  }
+
+  :host /deep/ .mat-list-item-content {
+    display: inline-flex !important;
+    flex-direction: row-reverse !important;
+  }
+  img {
+    height: 72px;
+    width: 25%;
+    margin-right: 25px;
+  }
+

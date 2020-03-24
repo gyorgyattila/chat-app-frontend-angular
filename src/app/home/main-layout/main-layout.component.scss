@@ -1,0 +1,21 @@
+/deep/ mat-sidenav{
+    width: 280px !important;
+    background-color: lightgray;
+}
+
+.mat-list-item{
+    justify-content: center !important;
+    font-size: larger !important;
+    color: crimson !important;
+}
+
+.mat-sidenav-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gainsboro;
+}
+
+.mat-sidenav-container{
+    height: 93%;
+}

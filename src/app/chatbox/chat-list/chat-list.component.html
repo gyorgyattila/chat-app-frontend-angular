@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-nav-list>
+    <div class="chat-list-header">
+      <h3>Public Rooms</h3>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-list-item *ngFor="let chatroom of chatRooms" (click)="openRoom(chatroom)" [routerLink]="['/room', chatroom._id]" routerLinkActive="active"
+    >
+      <img  src="https://www.fakechatapp.com/pics/logo-fb-en.png">
+      <h3 mat-line>{{chatroom.name}}</h3>
+      <p mat-line>members: {{chatroom.members.length}} </p>
+      <mat-divider></mat-divider>
+  </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-nav-list>
+</div>
