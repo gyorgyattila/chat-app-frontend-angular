@@ -8,4 +8,5 @@ import {HeaderComponent} from './shared';
 })
 export class AppComponent {
   title = 'chat-app';
+  console.log('angular running')
 }
